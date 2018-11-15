@@ -50,7 +50,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #Pregunta 2
 
 
-```{r echo=FALSE}
+```{r include=FALSE}
 library(tidyquant)
 ```
 
@@ -199,7 +199,7 @@ finanzas2<- function(z,r=TRUE, b=TRUE, c=TRUE){
 
 
 
-tickers <- c("AAPL", "MSFT","NVDA") # creamos un objeto
+tickers <- c("AAPL", "MSFT") # creamos un objeto
 data_activos <- tq_get(tickers,
                        get = "stock.prices",
                        from = "2010-01-01",
